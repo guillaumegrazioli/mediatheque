@@ -22,6 +22,11 @@ public class Book extends Item {
 	public String toString() {
 		return "Book{" + super.toString() + ", author=" + author + '}';
 	}
+
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
+    }
 	
 	
 }
